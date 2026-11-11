@@ -231,8 +231,10 @@
         const cy = vh / 2;
 
         ctx.strokeStyle = "#fbbf24";
-        ctx.lineWidth = 2;
-        ctx.strokeRect(cx - centerSize / 2, cy - centerSize / 2, centerSize, centerSize);
+        tx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(cx, cy, centerSize / 2, 0, 2 * Math.PI);
+        ctx.stroke();
 
         if (isTracking && scaledTemplates.length > 0) {
           cropCanvas.width = vw;
