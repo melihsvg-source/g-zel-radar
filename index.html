@@ -230,8 +230,9 @@
         const cx = vw / 2;
         const cy = vh / 2;
 
+        // Ortadaki nişan halkası (Daire)
         ctx.strokeStyle = "#fbbf24";
-        tx.lineWidth = 2;
+        ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.arc(cx, cy, centerSize / 2, 0, 2 * Math.PI);
         ctx.stroke();
